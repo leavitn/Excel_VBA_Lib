@@ -1,4 +1,6 @@
 ' library for storing keys and values in a string
+' dependencies:
+'  string
 
 ' create
 Function keyval_put(ByVal keyval As String, key As String, val As String) As String

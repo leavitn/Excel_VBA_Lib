@@ -121,8 +121,8 @@ End Sub
 
 Function convert_range_to_list(ByVal s As String) As String
 ' converts a range demarked by a ':' to a list of references. List broken up by commas '
-' Example Input: RSM!E121:F123
-' Example Output: RSM!E121,RSM!E122,RSM!E123,RSM!F121,RSM!F122,RSM!F123
+' Example Input: TAB!E121:F123
+' Example Output: TAB!E121,TAB!E122,TAB!E123,TAB!F121,TAB!F122,TAB!F123
     Dim ref_sheet As String
     Dim start_cell As String
     Dim tmp As String
@@ -144,7 +144,7 @@ Function convert_range_to_list(ByVal s As String) As String
     For j = 0 To m
         ' for each column '
         For i = 0 To n
-            ' add to the list the referenced cells in RSM!E121 format and separated by a comma '
+            ' add to the list the referenced cells in TAB!E121 format and separated by a comma '
             If Len(ref_sheet) > 0 Then
             ' If there is a reference, add the reference to the cell
                 tmp = tmp & ref_sheet & "!"
