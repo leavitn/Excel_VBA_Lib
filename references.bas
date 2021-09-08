@@ -158,7 +158,7 @@ Function convert_range_to_list(ByVal s As String) As String
 End Function
 
 Private Sub highlightDereferencedCells()
-' Deference all cell references until a cell with a value is found. Then highlight it.
+' Dereference all cell references until a cell with a value is found. Then highlight it.
 ' LIMITATION: As of now, won't work for cells located in other worksheets
 
     Dim s As String

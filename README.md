@@ -1,7 +1,7 @@
 # Excel_VBA_Lib
 Library of functions for Excel VBA
 
-I hope this will be useful. Especially the sitring library since strings are so critical 
+I hope this will be useful. Especially the string library since strings are so critical 
 for working with formulas and references.
 
 Below is an index of the functions:
