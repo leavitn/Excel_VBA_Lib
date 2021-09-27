@@ -15,15 +15,24 @@ Function keyval_put(ByVal keyval As String, key As String, val As String) As Str
 End Function
 
 ' read
-Function keyval_get(key As String, data As String) As Double
+Function keyval_get(data As String, key As String) As Double
 ' receives a list of key value pairs deliminated by ","
 ' key1:value1,key2:value2
 ' returns value associated with key argument
 ' value assumed to be a double
+    dim i as long
+    dim keyval as string
+    dim tmp as Double
+
     For i = 0 To word_count(data, ",")
         keyval = Split(data, ",")(i)
         If key = Split(keyval, ":")(0) Then
-            getval = CDbl(Split(keyval, ":")(1))
+            If len(key) + len(":") = len(keyval) Then
+                tmp = 0
+            Else
+                tmp = CDbl(Split(keyval, ":")(1))
+            End If
+            keyval_get = tmp
             Exit Function
         End If
     Next i
